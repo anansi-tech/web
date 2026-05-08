@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background: #0a0a0b;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Layered rich-black background:
+     1) warm radial vignette anchored at top (hero area)
+     2) subtle grain texture baked in via SVG data URI
+     3) fallback flat color beneath
+     Result: black that feels like a surface with depth, not a void */
+  background-color: #0a0a0b;
+  background-image:
+    radial-gradient(
+      ellipse 64% 28% at 50% 0%,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015) 36%,
+      transparent 68%
+    ),
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(220, 38, 38, 0.035), transparent 70%),
+    radial-gradient(ellipse 100% 60% at 50% 100%, rgba(220, 38, 38, 0.012), transparent 70%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-attachment: fixed, fixed, fixed, fixed;
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    240px 240px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  color: #f4f4f5;
+}
+
+/* When sections flip to a light background, neutralize the body gradient showing through */
+.section-light {
+  position: relative;
+  isolation: isolate;
+}
+
+::selection {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+/* ===== Glow utilities (use sparingly) ===== */
+.glow-red {
+  box-shadow: 0 0 48px rgba(220, 38, 38, 0.16);
+}
+.glow-red-soft {
+  box-shadow: 0 0 64px rgba(220, 38, 38, 0.1);
+}
+.text-glow-red {
+  text-shadow: 0 0 18px rgba(220, 38, 38, 0.28);
+}
+
+.hero-wordmark {
+  color: rgba(255, 255, 255, 0.88);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.88) 34%,
+    rgba(214, 219, 226, 0.84) 62%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08),
+    0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+/* ===== Red accent underline (for eyebrows that need to command) ===== */
+.eyebrow-accent {
+  position: relative;
+  display: inline-block;
+}
+.eyebrow-accent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 24px;
+  height: 1px;
+  background: linear-gradient(to right, #dc2626, transparent);
+  transform: translateX(-32px);
+}
+
+/* ===== Scroll reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-stagger.visible > *:nth-child(1) {
+  transition-delay: 0s;
+}
+.reveal-stagger.visible > *:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.reveal-stagger.visible > *:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.reveal-stagger.visible > *:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.reveal-stagger.visible > *:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+/* ===== Hero animations ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-fade-up-delay-1 {
+  animation-delay: 0.2s;
+}
+.animate-fade-up-delay-2 {
+  animation-delay: 0.7s;
+}
+.animate-fade-up-delay-3 {
+  animation-delay: 1.6s;
+}
+.animate-scroll-pulse {
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ===================================================================
+   Hero — Layer 1: v1 web atmosphere + orbit system
+   =================================================================== */
+
+.hero-web-layer {
+  opacity: 0.82;
+}
+
+.hero-web-line {
+  fill: none;
+  stroke: rgba(214, 220, 228, 0.14);
+  stroke-width: 1.05;
+  stroke-linecap: round;
+  animation: webFlicker 10.6s ease-in-out infinite;
+}
+
+.hero-web-line-soft {
+  stroke: rgba(214, 220, 228, 0.09);
+  animation-duration: 12.4s;
+}
+
+.hero-web-line-fine {
+  stroke: rgba(214, 220, 228, 0.11);
+  stroke-width: 0.88;
+  animation-duration: 9.2s;
+}
+
+.hero-web-line-diag {
+  stroke: rgba(220, 48, 54, 0.14);
+  stroke-width: 0.78;
+  animation-duration: 8.8s;
+}
+
+.hero-web-line-diag-soft {
+  stroke: rgba(220, 48, 54, 0.1);
+  stroke-width: 0.68;
+  animation-duration: 11.8s;
+}
+
+.hero-web-node {
+  fill: rgba(220, 44, 50, 0.82);
+  filter: drop-shadow(0 0 4px rgba(220, 38, 38, 0.28));
+  animation: webNodePulse 4.8s ease-in-out infinite;
+}
+
+.hero-web-node-soft {
+  fill: rgba(220, 44, 50, 0.46);
+  filter: drop-shadow(0 0 3px rgba(220, 38, 38, 0.16));
+  animation-duration: 6.2s;
+}
+
+.hero-red-bloom {
+  animation: bloomPulse 9s ease-in-out infinite;
+}
+
+.hero-orbit-outer {
+  fill: none;
+  stroke: rgba(175, 53, 60, 0.095);
+  stroke-width: 0.92;
+}
+
+.hero-arc {
+  filter: drop-shadow(0 0 4px rgba(196, 20, 28, 0.14));
+  stroke-linecap: round;
+  animation: arcPulse 6.8s ease-in-out infinite;
+}
+
+.hero-arc-endpoint {
+  fill: #b71a22;
+  filter: drop-shadow(0 0 3px rgba(225, 27, 34, 0.28));
+}
+
+@keyframes webFlicker {
+  0%,
+  100% {
+    opacity: 0.52;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes webNodePulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.18;
+    transform: scale(0.82);
+  }
+  72% {
+    opacity: 0.86;
+    transform: scale(1.16);
+  }
+}
+
+@keyframes bloomPulse {
+  0%,
+  100% {
+    opacity: 0.82;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes arcPulse {
+  0%,
+  100% {
+    opacity: 0.94;
+  }
+  50% {
+    opacity: 0.56;
+  }
+}
+
+/* ===================================================================
+   Hero — Layer 2: Symbol (graphite embossed)
+   =================================================================== */
+
+.hero-symbol-position {
+  transform: translateY(-26px);
+}
+
+.hero-symbol-wrap {
+  width: min(48vw, 210px);
+  aspect-ratio: auto;
+  position: relative;
+}
+
+.hero-symbol {
+  width: 100%;
+  height: auto;
+  filter: brightness(1.04) contrast(1.08) saturate(0.94)
+    drop-shadow(-1px -1px 0 rgba(255, 255, 255, 0.11))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.06))
+    drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.64))
+    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.56))
+    drop-shadow(0 0 12px rgba(115, 19, 24, 0.09));
+}
+
+.hero-wordmark-v1 {
+  filter: invert(1) brightness(0.78) contrast(0.83) saturate(0.22)
+    drop-shadow(0 7px 16px rgba(0, 0, 0, 0.26));
+  opacity: 0.78;
+}
+
+@media (min-width: 768px) {
+  .hero-symbol-position {
+    transform: translateY(-26px);
+  }
+
+  .hero-symbol-wrap {
+    width: min(38vw, 236px);
+  }
+}
