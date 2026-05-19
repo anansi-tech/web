@@ -419,10 +419,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== ACADEMY ===== */}
+      {/* ===== KAIRO ===== */}
       <section
         className="relative overflow-hidden py-24 md:py-28 border-b border-anansi-line"
-        id="academy"
+        id="kairo"
       >
         <div className="absolute inset-0 pointer-events-none">
           <div
@@ -443,27 +443,27 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative">
           <div className="grid md:grid-cols-2 gap-14 md:gap-20 items-center reveal">
             <div>
-              <Eyebrow>Anansi Academy</Eyebrow>
+              <Eyebrow>Kairo · Executive AI Education</Eyebrow>
               <h2 className="font-display font-bold text-[clamp(28px,3.5vw,44px)] leading-[1.15] text-white">
-                Learn AI.
+                Stop reading about AI.
                 <br />
-                Face to face.
-                <br />
-                In 2-3 days.
+                Start using it.
               </h2>
               <p className="text-[17px] text-anansi-gray-400 max-w-[500px] mt-6 leading-[1.75]">
-                A practical intensive for working professionals who keep hearing about AI and still
-                do not have a clear framework for using it. No fluff. No passive slides. You leave
-                knowing what AI is, where it fits, and how to apply it immediately.
+                A 2-day hands-on workshop for working professionals. Open your laptop, learn from
+                someone who actually builds with AI, leave with working tools in your real job by
+                Monday morning.
               </p>
               <a
-                href="mailto:academy@anansi.xyz"
+                href="https://kairo.anansi.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 mt-9 px-9 py-4
                            font-display font-semibold text-[13px] tracking-[0.1em] uppercase
                            text-white bg-anansi-red rounded-sm
                            hover:bg-anansi-red-deep hover:shadow-red-glow transition-all group"
               >
-                Inquire <span className="transition-transform group-hover:translate-x-1">→</span>
+                Learn more <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
             </div>
             <div className="bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.015)_100%)] border border-white/[0.08] rounded-sm p-7 md:p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_24px_60px_rgba(0,0,0,0.22)]">
@@ -472,10 +472,10 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {[
+                  { label: "Duration", value: "2 days" },
+                  { label: "Cohort", value: "15 seats" },
                   { label: "Format", value: "In-person" },
-                  { label: "Duration", value: "2-3 days" },
-                  { label: "Audience", value: "Working professionals" },
-                  { label: "Location", value: "Cohorts in Miami" },
+                  { label: "Location", value: "Miami" },
                 ].map((d, i) => (
                   <div key={i} className="pt-5 border-t border-anansi-line">
                     <p className="text-[10px] tracking-[0.15em] uppercase text-anansi-gray-500 mb-1.5">

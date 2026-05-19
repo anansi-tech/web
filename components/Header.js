@@ -18,7 +18,7 @@ export default function Header() {
   const navLinks = [
     { label: "What We Build", href: isHomePage ? "#pillars" : "/#pillars" },
     { label: "Spice", href: "/spice" },
-    { label: "Academy", href: isHomePage ? "#academy" : "/#academy" },
+    { label: "Kairo", href: "https://kairo.anansi.xyz", external: true },
     { label: "CaribCoin", href: "/caribcoin" },
   ];
   const visibleNavLinks = navLinks.filter((link) => link.href !== pathname);
@@ -116,19 +116,26 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-9">
-          {visibleNavLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={`text-[12px] tracking-[0.1em] uppercase transition-colors duration-300 ${
-                light
-                  ? "text-[#0A0A0A]/65 hover:text-[#0A0A0A]"
-                  : "text-white/70 hover:text-white"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {visibleNavLinks.map((link) => {
+            const cls = `text-[12px] tracking-[0.1em] uppercase transition-colors duration-300 ${
+              light ? "text-[#0A0A0A]/65 hover:text-[#0A0A0A]" : "text-white/70 hover:text-white"
+            }`;
+            return link.external ? (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cls}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link key={link.label} href={link.href} className={cls}>
+                {link.label}
+              </Link>
+            );
+          })}
           <a
             href="https://spice.anansi.xyz"
             target="_blank"
@@ -160,18 +167,32 @@ export default function Header() {
             light ? "bg-white/95 border-black/[0.06]" : "bg-[#060606]/95 border-white/[0.03]"
           }`}
         >
-          {visibleNavLinks.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`block text-sm uppercase tracking-widest ${
-                light ? "text-[#0A0A0A]/70" : "text-white/75"
-              }`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {visibleNavLinks.map((item) => {
+            const cls = `block text-sm uppercase tracking-widest ${
+              light ? "text-[#0A0A0A]/70" : "text-white/75"
+            }`;
+            return item.external ? (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cls}
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={cls}
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <a
             href="https://spice.anansi.xyz"
             className={`block text-center text-sm uppercase tracking-widest py-3 rounded-sm border ${
