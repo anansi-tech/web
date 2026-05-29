@@ -450,9 +450,8 @@ export default function Home() {
                 Start using it.
               </h2>
               <p className="text-[17px] text-anansi-gray-400 max-w-[500px] mt-6 leading-[1.75]">
-                A 2-day hands-on workshop for working professionals. Open your laptop, learn from
-                someone who actually builds with AI, leave with working tools in your real job by
-                Monday morning.
+                Executive AI education — intensive, hands-on workshops teaching working
+                professionals to use AI in their real jobs.
               </p>
               <a
                 href="https://kairo.anansi.xyz"
