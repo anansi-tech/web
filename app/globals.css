@@ -309,7 +309,7 @@ body {
 }
 
 .hero-symbol-wrap {
-  width: min(48vw, 210px);
+  width: min(38vw, 210px);
   aspect-ratio: auto;
   position: relative;
 }

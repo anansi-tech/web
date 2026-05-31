@@ -169,7 +169,7 @@ export default function Home() {
 
         <div className="relative z-20 min-h-[85svh] md:min-h-[87svh] flex flex-col items-center pt-[calc(36vh+8px)] sm:pt-[calc(40vh+14px)] md:pt-[calc(46vh+28px)] pb-6 md:pb-10 px-6 -translate-y-[2vh]">
           <h1 className="sr-only">ANANSI</h1>
-          <div className="mt-10 md:mt-12 animate-fade-up animate-fade-up-delay-2">
+          <div className="mt-14 sm:mt-16 md:mt-16 animate-fade-up animate-fade-up-delay-2">
             <Image
               src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-dark-bg.svg"
               alt="ANANSI"
