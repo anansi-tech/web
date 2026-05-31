@@ -156,7 +156,7 @@ export default function Home() {
           <div className="hero-symbol-position">
             <div className="hero-symbol-wrap animate-fade-up animate-fade-up-delay-1">
               <Image
-                src="/v5/brand/symbol/svg/anansi-symbol-fullcolor-transparent.svg"
+                src="/v5/brand/symbol/svg/anansi-symbol-fullcolor-dark-bg.svg"
                 alt="Anansi"
                 width={622}
                 height={905}
@@ -170,20 +170,18 @@ export default function Home() {
         <div className="relative z-20 min-h-[85svh] md:min-h-[87svh] flex flex-col items-center pt-[calc(36vh+8px)] sm:pt-[calc(40vh+14px)] md:pt-[calc(46vh+28px)] pb-6 md:pb-10 px-6 -translate-y-[2vh]">
           <h1 className="sr-only">ANANSI</h1>
           <div className="mt-10 md:mt-12 animate-fade-up animate-fade-up-delay-2">
-            <div style={{ transform: "translateY(56px)" }}>
-              <Image
-                src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-transparent.svg"
-                alt="ANANSI"
-                width={1117}
-                height={123}
-                priority
-                className="hero-wordmark-v1 w-[min(78vw,330px)] sm:w-[min(72vw,380px)] md:w-[min(42vw,470px)] h-auto"
-              />
-            </div>
+            <Image
+              src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-dark-bg.svg"
+              alt="ANANSI"
+              width={1117}
+              height={123}
+              priority
+              className="hero-wordmark-v1 w-[min(78vw,330px)] sm:w-[min(72vw,380px)] md:w-[min(42vw,470px)] h-auto"
+            />
           </div>
 
           <div className="translate-y-[6px] md:translate-y-[10px]">
-            <h2 className="max-w-[920px] text-center font-display font-medium text-[clamp(24px,4.8vw,38px)] leading-[1.08] mt-4 sm:mt-5 md:mt-6 text-anansi-gray-300 animate-fade-up animate-fade-up-delay-2">
+            <h2 className="max-w-[920px] text-center font-display font-medium text-[clamp(24px,4.8vw,38px)] leading-[1.08] mt-8 sm:mt-10 md:mt-12 text-anansi-gray-300 animate-fade-up animate-fade-up-delay-2">
               Technology for markets the world has{" "}
               <span className="inline-block whitespace-nowrap text-anansi-red font-semibold">
                 ignored.

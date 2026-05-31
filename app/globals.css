@@ -317,18 +317,15 @@ body {
 .hero-symbol {
   width: 100%;
   height: auto;
-  filter: brightness(1.04) contrast(1.08) saturate(0.94)
-    drop-shadow(-1px -1px 0 rgba(255, 255, 255, 0.11))
-    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.06))
-    drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.64))
+  filter:
     drop-shadow(0 14px 24px rgba(0, 0, 0, 0.56))
-    drop-shadow(0 0 12px rgba(115, 19, 24, 0.09));
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.40))
+    drop-shadow(0 0 18px rgba(193, 18, 31, 0.10));
 }
 
 .hero-wordmark-v1 {
-  filter: invert(1) brightness(0.78) contrast(0.83) saturate(0.22)
-    drop-shadow(0 7px 16px rgba(0, 0, 0, 0.26));
-  opacity: 0.78;
+  filter: drop-shadow(0 7px 16px rgba(0, 0, 0, 0.28));
+  opacity: 0.96;
 }
 
 @media (min-width: 768px) {
