@@ -309,7 +309,7 @@ body {
 }
 
 .hero-symbol-wrap {
-  width: min(38vw, 210px);
+  width: min(max(12vw, 21svh), 210px);
   aspect-ratio: auto;
   position: relative;
 }
@@ -334,6 +334,6 @@ body {
   }
 
   .hero-symbol-wrap {
-    width: min(38vw, 236px);
+    width: min(max(13vw, 22svh), 236px);
   }
 }
