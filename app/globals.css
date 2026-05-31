@@ -304,13 +304,8 @@ body {
    Hero — Layer 2: Symbol (graphite embossed)
    =================================================================== */
 
-.hero-symbol-position {
-  transform: translateY(-26px);
-}
-
 .hero-symbol-wrap {
-  width: min(max(12vw, 21svh), 210px);
-  aspect-ratio: auto;
+  width: clamp(96px, 18vh, 150px);
   position: relative;
 }
 
@@ -329,11 +324,5 @@ body {
 }
 
 @media (min-width: 768px) {
-  .hero-symbol-position {
-    transform: translateY(-26px);
-  }
-
-  .hero-symbol-wrap {
-    width: min(max(13vw, 22svh), 236px);
-  }
+  .hero-symbol-wrap { width: clamp(150px, 20vh, 220px); }
 }

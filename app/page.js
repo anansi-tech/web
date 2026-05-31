@@ -151,65 +151,60 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* ===== Layer 2: Embossed symbol ===== */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none -translate-y-[11vh] md:-translate-y-[10vh]">
-          <div className="hero-symbol-position">
-            <div className="hero-symbol-wrap animate-fade-up animate-fade-up-delay-1">
-              <Image
-                src="/v5/brand/symbol/svg/anansi-symbol-fullcolor-dark-bg.svg"
-                alt="Anansi"
-                width={622}
-                height={905}
-                priority
-                className="hero-symbol"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="relative z-20 min-h-[max(85svh,600px)] md:min-h-[max(87svh,600px)] flex flex-col items-center pt-[calc(36vh+8px)] sm:pt-[calc(40vh+14px)] md:pt-[calc(52vh+28px)] pb-6 md:pb-10 px-6 -translate-y-[2vh]">
+        <div className="relative z-20 flex min-h-[max(85svh,600px)] md:min-h-[max(87svh,600px)] flex-col items-center justify-center px-6 py-20 md:py-24">
           <h1 className="sr-only">ANANSI</h1>
-          <div className="mt-14 sm:mt-16 md:mt-16 animate-fade-up animate-fade-up-delay-2">
+
+          {/* Symbol — flow item */}
+          <div className="hero-symbol-wrap animate-fade-up animate-fade-up-delay-1">
             <Image
-              src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-dark-bg.svg"
-              alt="ANANSI"
-              width={1117}
-              height={123}
+              src="/v5/brand/symbol/svg/anansi-symbol-fullcolor-dark-bg.svg"
+              alt="Anansi"
+              width={622}
+              height={905}
               priority
-              className="hero-wordmark-v1 w-[min(78vw,330px)] sm:w-[min(72vw,380px)] md:w-[min(42vw,470px)] h-auto"
+              className="hero-symbol"
             />
           </div>
 
-          <div className="translate-y-[6px] md:translate-y-[10px]">
-            <h2 className="max-w-[920px] text-center font-display font-medium text-[clamp(24px,4.8vw,38px)] leading-[1.08] mt-8 sm:mt-10 md:mt-12 text-anansi-gray-300 animate-fade-up animate-fade-up-delay-2">
-              Technology for markets the world has{" "}
-              <span className="inline-block whitespace-nowrap text-anansi-red font-semibold">
-                ignored.
-              </span>
-            </h2>
+          {/* Wordmark */}
+          <Image
+            src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-dark-bg.svg"
+            alt="ANANSI"
+            width={1117}
+            height={123}
+            priority
+            className="hero-wordmark-v1 mt-7 sm:mt-8 md:mt-9 w-[min(68vw,300px)] sm:w-[min(60vw,360px)] md:w-[min(40vw,460px)] h-auto"
+          />
 
-            <p className="mx-auto max-w-[420px] sm:max-w-[660px] text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.1em] sm:tracking-[0.14em] uppercase text-anansi-gray-300/90 mt-5 text-center animate-fade-up animate-fade-up-delay-3">
-              Applied AI · Real Assets · Real Markets
-            </p>
+          {/* Subhead */}
+          <h2 className="max-w-[920px] text-center font-display font-medium text-[clamp(22px,4.6vw,38px)] leading-[1.1] mt-6 sm:mt-7 md:mt-8 text-anansi-gray-300 animate-fade-up animate-fade-up-delay-2">
+            Technology for markets the world has{" "}
+            <span className="inline-block whitespace-nowrap text-anansi-red font-semibold">ignored.</span>
+          </h2>
 
-            <div className="mt-8 mx-auto flex w-full max-w-[320px] sm:w-auto sm:max-w-none flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-fade-up animate-fade-up-delay-3">
-              <a
-                href="#pillars"
-                className="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 bg-anansi-red hover:bg-anansi-red-deep text-white text-[13px] tracking-[0.1em] uppercase font-semibold transition-all duration-200 shadow-red-glow hover:shadow-red-glow-intense min-w-[180px]"
-              >
-                What We Build
-              </a>
-              <Link
-                href="/spice"
-                className="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 border border-white/20 hover:border-anansi-red/60 text-white text-[13px] tracking-[0.1em] uppercase font-semibold transition-all duration-200 min-w-[180px]"
-              >
-                Explore Spice
-              </Link>
-            </div>
+          {/* Eyebrow */}
+          <p className="mx-auto max-w-[420px] sm:max-w-[660px] text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.1em] sm:tracking-[0.14em] uppercase text-anansi-gray-300/90 mt-5 text-center animate-fade-up animate-fade-up-delay-3">
+            Applied AI · Real Assets · Real Markets
+          </p>
+
+          {/* CTAs */}
+          <div className="mt-8 mx-auto flex w-full max-w-[320px] sm:w-auto sm:max-w-none flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-fade-up animate-fade-up-delay-3">
+            <a
+              href="#pillars"
+              className="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 bg-anansi-red hover:bg-anansi-red-deep text-white text-[13px] tracking-[0.1em] uppercase font-semibold transition-all duration-200 shadow-red-glow hover:shadow-red-glow-intense min-w-[180px]"
+            >
+              What We Build
+            </a>
+            <Link
+              href="/spice"
+              className="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 border border-white/20 hover:border-anansi-red/60 text-white text-[13px] tracking-[0.1em] uppercase font-semibold transition-all duration-200 min-w-[180px]"
+            >
+              Explore Spice
+            </Link>
           </div>
         </div>
 
-        <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-3 animate-fade-up animate-fade-up-delay-3 -translate-y-[10vh]">
+        <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-3 animate-fade-up animate-fade-up-delay-3">
           <span className="block w-px h-10 bg-gradient-to-b from-anansi-red/40 to-transparent animate-scroll-pulse" />
         </div>
       </section>
