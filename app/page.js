@@ -172,7 +172,7 @@ export default function Home() {
           <div className="mt-10 md:mt-12 animate-fade-up animate-fade-up-delay-2">
             <div style={{ transform: "translateY(56px)" }}>
               <Image
-                src="/brand/wordmark/anansi-wordmark-primary.svg"
+                src="/brand/wordmark/anansi-symbol-transparent.png"
                 alt="ANANSI"
                 width={1916}
                 height={821}
