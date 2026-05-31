@@ -22,14 +22,14 @@ export default function SpicePage() {
           >
             <defs>
               <radialGradient id="spiceGlow" cx="50%" cy="50%" r="40%">
-                <stop offset="0%" stopColor="#DC2626" stopOpacity="0.15" />
+                <stop offset="0%" stopColor="#C1121F" stopOpacity="0.15" />
                 <stop offset="40%" stopColor="#991B1B" stopOpacity="0.06" />
                 <stop offset="100%" stopColor="#991B1B" stopOpacity="0" />
               </radialGradient>
               <radialGradient id="spiceGlowRim" cx="50%" cy="50%" r="55%">
-                <stop offset="60%" stopColor="#DC2626" stopOpacity="0" />
-                <stop offset="85%" stopColor="#DC2626" stopOpacity="0.02" />
-                <stop offset="100%" stopColor="#DC2626" stopOpacity="0" />
+                <stop offset="60%" stopColor="#C1121F" stopOpacity="0" />
+                <stop offset="85%" stopColor="#C1121F" stopOpacity="0.02" />
+                <stop offset="100%" stopColor="#C1121F" stopOpacity="0" />
               </radialGradient>
               <radialGradient id="spiceSheen" cx="50%" cy="35%" r="34%">
                 <stop offset="0%" stopColor="#ffffff" stopOpacity="0.08" />
@@ -42,7 +42,7 @@ export default function SpicePage() {
               </linearGradient>
               <linearGradient id="spiceThreadBright" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#EF4444" stopOpacity="0.22" />
-                <stop offset="100%" stopColor="#DC2626" stopOpacity="0" />
+                <stop offset="100%" stopColor="#C1121F" stopOpacity="0" />
               </linearGradient>
             </defs>
             <circle cx="960" cy="410" r="320" fill="url(#spiceSheen)" />

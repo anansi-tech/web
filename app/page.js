@@ -22,12 +22,12 @@ export default function Home() {
               </radialGradient>
               <linearGradient id="heroArcLeft" x1="0%" y1="50%" x2="100%" y2="50%">
                 <stop offset="0%" stopColor="#C4141C" stopOpacity="0" />
-                <stop offset="50%" stopColor="#DC2626" stopOpacity="0.72" />
+                <stop offset="50%" stopColor="#C1121F" stopOpacity="0.72" />
                 <stop offset="100%" stopColor="#C4141C" stopOpacity="0.04" />
               </linearGradient>
               <linearGradient id="heroArcRight" x1="100%" y1="50%" x2="0%" y2="50%">
                 <stop offset="0%" stopColor="#C4141C" stopOpacity="0" />
-                <stop offset="50%" stopColor="#DC2626" stopOpacity="0.72" />
+                <stop offset="50%" stopColor="#C1121F" stopOpacity="0.72" />
                 <stop offset="100%" stopColor="#C4141C" stopOpacity="0.04" />
               </linearGradient>
               <linearGradient id="heroCopyFade" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -156,7 +156,7 @@ export default function Home() {
           <div className="hero-symbol-position">
             <div className="hero-symbol-wrap animate-fade-up animate-fade-up-delay-1">
               <Image
-                src="/brand/symbol/anansi-symbol-color1.svg"
+                src="/v5/brand/symbol/svg/anansi-symbol-fullcolor-transparent.svg"
                 alt="Anansi"
                 width={622}
                 height={905}
@@ -172,10 +172,10 @@ export default function Home() {
           <div className="mt-10 md:mt-12 animate-fade-up animate-fade-up-delay-2">
             <div style={{ transform: "translateY(56px)" }}>
               <Image
-                src="/brand/wordmark/anansi-symbol-transparent.png"
+                src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-transparent.svg"
                 alt="ANANSI"
-                width={1916}
-                height={821}
+                width={1117}
+                height={123}
                 priority
                 className="hero-wordmark-v1 w-[min(78vw,330px)] sm:w-[min(72vw,380px)] md:w-[min(42vw,470px)] h-auto"
               />
@@ -230,7 +230,7 @@ export default function Home() {
             className="absolute bottom-[-36%] left-[12%] w-[420px] h-[420px] rounded-full"
             style={{
               background:
-                "radial-gradient(circle, rgba(220,38,38,0.045) 0%, rgba(153,27,27,0.012) 40%, transparent 74%)",
+                "radial-gradient(circle, rgba(193,18,31,0.045) 0%, rgba(122,11,20,0.012) 40%, transparent 74%)",
             }}
           />
         </div>
@@ -429,7 +429,7 @@ export default function Home() {
             className="absolute top-[18%] left-[10%] w-[520px] h-[520px] rounded-full"
             style={{
               background:
-                "radial-gradient(circle, rgba(220,38,38,0.05) 0%, rgba(153,27,27,0.014) 36%, transparent 74%)",
+                "radial-gradient(circle, rgba(193,18,31,0.05) 0%, rgba(122,11,20,0.014) 36%, transparent 74%)",
             }}
           />
           <div
@@ -566,7 +566,7 @@ export default function Home() {
             className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[760px] h-[760px] rounded-full"
             style={{
               background:
-                "radial-gradient(circle, rgba(220,38,38,0.075) 0%, rgba(153,27,27,0.02) 34%, transparent 74%)",
+                "radial-gradient(circle, rgba(193,18,31,0.075) 0%, rgba(122,11,20,0.02) 34%, transparent 74%)",
             }}
           />
           <div
@@ -642,10 +642,10 @@ export default function Home() {
           />
           <div className="absolute top-12 right-10 hidden lg:block opacity-[0.07]">
             <Image
-              src="/brand/wordmark/anansi-wordmark-dotted.svg"
+              src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-transparent.svg"
               alt=""
-              width={1916}
-              height={821}
+              width={1117}
+              height={123}
               className="w-[300px] h-auto invert"
             />
           </div>
@@ -656,7 +656,7 @@ export default function Home() {
               <Eyebrow>Why Anansi</Eyebrow>
               <div className="inline-flex items-center justify-center w-28 h-28 md:w-32 md:h-32 rounded-full border border-white/[0.12] bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(247,248,251,0.98)_48%,rgba(232,236,242,0.98)_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.78),inset_0_-14px_22px_rgba(17,19,26,0.08),0_18px_36px_rgba(0,0,0,0.24)] mb-10">
                 <Image
-                  src="/brand/symbol/anansi-symbol-dark.svg"
+                  src="/v5/brand/symbol/svg/anansi-symbol-fullcolor-transparent.svg"
                   alt=""
                   width={622}
                   height={905}
@@ -711,7 +711,7 @@ export default function Home() {
           className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
           style={{
             background:
-              "radial-gradient(circle, rgba(220,38,38,0.035) 0%, rgba(153,27,27,0.01) 36%, transparent 74%)",
+              "radial-gradient(circle, rgba(193,18,31,0.035) 0%, rgba(122,11,20,0.01) 36%, transparent 74%)",
           }}
         />
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 reveal relative">
@@ -793,13 +793,13 @@ function Stat({ number, unit, label }) {
 function Capability({ num, title, desc, primary, secondary }) {
   return (
     <div className="bg-anansi-deep border border-white/[0.06] p-9 sm:p-10 md:p-11 hover:bg-anansi-surface transition-colors duration-300 group relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-[linear-gradient(90deg,rgba(220,38,38,0.55),rgba(255,255,255,0.08),transparent)]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-[linear-gradient(90deg,rgba(193,18,31,0.55),rgba(255,255,255,0.08),transparent)]" />
       {/* Subtle red glow on hover */}
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at top left, rgba(255,255,255,0.03) 0%, rgba(220,38,38,0.018) 28%, transparent 56%)",
+            "radial-gradient(circle at top left, rgba(255,255,255,0.03) 0%, rgba(193,18,31,0.018) 28%, transparent 56%)",
         }}
       />
       <div className="relative">

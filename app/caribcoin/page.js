@@ -69,7 +69,7 @@ export default function CaribCoinPage() {
             className="absolute top-20 right-[10%] w-[420px] h-[420px] rounded-full"
             style={{
               background:
-                "radial-gradient(circle, rgba(220,38,38,0.065) 0%, rgba(220,38,38,0.018) 42%, transparent 74%)",
+                "radial-gradient(circle, rgba(193,18,31,0.065) 0%, rgba(193,18,31,0.018) 42%, transparent 74%)",
             }}
           />
           <div
@@ -84,10 +84,10 @@ export default function CaribCoinPage() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-40 pb-20 relative">
           <div className="absolute top-10 right-6 hidden xl:block opacity-[0.06] pointer-events-none">
             <Image
-              src="/brand/wordmark/anansi-wordmark-dotted.svg"
+              src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-transparent.svg"
               alt=""
-              width={1916}
-              height={821}
+              width={1117}
+              height={123}
               className="w-[320px] h-auto invert"
             />
           </div>
