@@ -31,11 +31,13 @@ Next.js 14 App Router, React 18, Tailwind CSS 3. No backend — purely a marketi
 ## Design System
 
 All colors are in `tailwind.config.js` under the `anansi` namespace. Key tokens:
-- `anansi-black` (`#0A0A0B`) — primary page background
-- `anansi-red` (`#DC2626`) — brand accent, used for all primary CTAs and highlights
+- `anansi-black` (`#050505`) — void_black; primary page background
+- `anansi-red` (`#C1121F`) — hunt_red; brand accent, all primary CTAs and highlights
+- `anansi-red-deep` (`#9E0E18`) — hover/pressed states
+- `anansi-red-glow` / `anansi-red-bright` (`#E11D2A`) — focus rings, glows, gradients
 - `anansi-gray-{300,400,500}` — body copy hierarchy on dark backgrounds
 - `anansi-line` (`#1F1F23`) — dividers/borders on dark surfaces
-- `anansi-white` (`#FAFAF7`) — used on light "inverted" sections
+- `anansi-white` (`#F7F7F2`) — ash_white; used on light "inverted" sections
 
 **Animation classes** (defined in `globals.css`):
 - `.reveal` — fades up on scroll (managed by `ScrollReveal`)
@@ -43,10 +45,14 @@ All colors are in `tailwind.config.js` under the `anansi` namespace. Key tokens:
 - `.animate-fade-up`, `.animate-fade-up-delay-{1,2,3}` — CSS keyframe animations for the hero (fire once on load)
 - `.section-light` — marks a section with a white background so `Header` can flip its color scheme
 
-**Brand assets** live in `public/brand/` (not committed to the repo; supply separately):
-- `public/brand/symbol/anansi-symbol-color1.svg` — hero symbol
-- `public/brand/symbol/anansi-symbol-dark.svg`, `anansi-symbol-white.svg` — nav logo variants
-- `public/brand/wordmark/anansi-wordmark-primary.svg`, `anansi-wordmark-dotted.svg` — wordmark variants
+**Brand assets** live in `public/v5/` (committed to the repo):
+- `public/v5/brand/symbol/svg/anansi-symbol-fullcolor-transparent.svg` — hero symbol and nav spider mark (works on light and dark)
+- `public/v5/brand/wordmark/svg/anansi-wordmark-mono-white.svg` — nav wordmark on dark backgrounds
+- `public/v5/brand/wordmark/svg/anansi-wordmark-mono-black.svg` — nav wordmark on light backgrounds
+- `public/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-dark-bg.svg` — footer wordmark (full-color, dark bg)
+- `public/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-transparent.svg` — hero wordmark / decorative use
+- `public/v5/favicon/wordmark/` — favicon files using the "A" wordmark mark (crisp at small sizes)
+- `public/v5/social/anansi-social-card-1200x630.png` — OG/Twitter social card
 
 ## Deployment
 
