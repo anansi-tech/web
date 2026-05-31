@@ -97,7 +97,7 @@ export default function Header() {
             }}
           >
             <Image
-              src={light ? "/brand/symbol/anansi-symbol-dark.svg" : "/brand/symbol/anansi-symbol-white.svg"}
+              src="/v5/brand/symbol/svg/anansi-symbol-fullcolor-transparent.svg"
               alt="Anansi"
               width={622}
               height={905}
@@ -105,13 +105,11 @@ export default function Header() {
             />
           </div>
           <Image
-            src="/brand/wordmark/anansi-wordmark-primary.svg"
+            src={light ? "/v5/brand/wordmark/svg/anansi-wordmark-mono-black.svg" : "/v5/brand/wordmark/svg/anansi-wordmark-mono-white.svg"}
             alt="Anansi"
-            width={1916}
-            height={821}
-            className={`w-[84px] md:w-[102px] h-auto transition-all duration-300 ${
-              light ? "opacity-95" : "invert opacity-95"
-            }`}
+            width={1117}
+            height={123}
+            className="w-[84px] md:w-[102px] h-auto transition-all duration-300 opacity-95"
           />
         </Link>
 
@@ -143,7 +141,7 @@ export default function Header() {
                        px-6 py-2.5 rounded-sm transition-all duration-300 border shadow-[0_0_0_rgba(0,0,0,0)] ${
                          light
                            ? "text-[#0A0A0A] border-[#0A0A0A]/20 hover:bg-[#0A0A0A] hover:text-white hover:border-[#0A0A0A]"
-                           : "text-white border-anansi-red/35 bg-anansi-red/8 hover:bg-anansi-red hover:text-white hover:border-anansi-red hover:shadow-[0_0_32px_rgba(220,38,38,0.22)]"
+                           : "text-white border-anansi-red/35 bg-anansi-red/8 hover:bg-anansi-red hover:text-white hover:border-anansi-red hover:shadow-[0_0_32px_rgba(193,18,31,0.22)]"
                        }`}
           >
             {ctaLabel}
