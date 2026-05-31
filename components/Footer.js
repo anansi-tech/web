@@ -7,18 +7,18 @@ export default function Footer() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at 50% 0%, rgba(220,38,38,0.08) 0%, rgba(220,38,38,0.03) 20%, transparent 58%)",
+            "radial-gradient(circle at 50% 0%, rgba(193,18,31,0.08) 0%, rgba(193,18,31,0.03) 20%, transparent 58%)",
         }}
       />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-anansi-red/55 to-transparent pointer-events-none" />
       <div className="max-w-[1200px] h-12 md:h-14 mx-auto flex flex-row items-center justify-between gap-4 relative">
         <div className="w-[68px] md:w-[86px] flex items-center justify-center shrink-0">
           <Image
-            src="/brand/wordmark/anansi-wordmark-primary.svg"
+            src="/v5/brand/wordmark/svg/anansi-wordmark-fullcolor-dark-bg.svg"
             alt="Anansi"
-            width={1916}
-            height={821}
-            className="w-full h-auto invert opacity-90 block"
+            width={1117}
+            height={123}
+            className="w-full h-auto opacity-90 block"
           />
         </div>
         <div className="flex gap-3 md:gap-5 items-center justify-end text-right min-w-0">
