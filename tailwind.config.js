@@ -6,19 +6,20 @@ module.exports = {
       colors: {
         anansi: {
           // Dark surfaces — layered, warm, never flat
-          black: "#0A0A0B",         // primary dark bg
-          deep: "#050507",          // deepest — behind elevated surfaces
-          surface: "#0F0F12",       // cards / elevated blocks
-          elevated: "#17171B",      // hover states, lifted surfaces
+          black: "#050505",         // void_black — primary dark bg
+          deep: "#000000",          // deepest — behind elevated surfaces
+          surface: "#0E0E10",       // cards / elevated blocks
+          elevated: "#161618",      // hover states, lifted surfaces
 
-          // Command red — the signature
-          red: "#DC2626",           // primary red, commands attention
-          "red-deep": "#991B1B",    // hover / pressed states
-          "red-glow": "#EF4444",    // lighter for glows and gradients
-          "red-muted": "#7F1D1D",   // restrained contexts (legacy /caribcoin page compatibility)
+          // Command red — the signature (brand system B, derived from hunt_red #C1121F)
+          red: "#C1121F",           // hunt_red — primary brand red
+          "red-deep": "#9E0E18",    // hover / pressed states
+          "red-glow": "#E11D2A",    // red-bright — focus rings, glows, gradients
+          "red-bright": "#E11D2A",  // alias for red-glow
+          "red-muted": "#7A0B14",   // restrained contexts (legacy /caribcoin page compatibility)
 
           // Whites — layered tints
-          white: "#FAFAF7",         // warm white for light sections
+          white: "#F7F7F2",         // ash_white — warm white for light sections
           "white-pure": "#FFFFFF",
 
           // Grays — real tones, not just opacity
